@@ -1,5 +1,6 @@
 import styled, { css, FlattenSimpleInterpolation } from 'styled-components';
 
+// Definindo a tipagem para as propriedades a serem recebidas
 interface UploadProps {
   isDragActive: boolean;
   isDragReject: boolean;
@@ -32,18 +33,21 @@ export const DropContainer = styled.div.attrs({
     props.isDragReject && dragReject}
 `;
 
+// Definindo as cores para as mensagens
 const messageColors = {
   default: '#5636D3',
   error: '#e83f5b',
   success: '#12a454',
 };
 
+// Estilizando a mensagem de upload
 export const UploadMessage = styled.p`
   display: flex;
   font-size: 16px;
   line-height: 24px;
   padding: 48px 0;
 
+  // Escolhendo a cor da mensagem a partir do tipo recebido nas propriedades
   color: ${({ type }: UploadProps) => messageColors[type || 'default']};
 
   justify-content: center;

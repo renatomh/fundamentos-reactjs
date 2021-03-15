@@ -16,6 +16,7 @@ export const Title = styled.h1`
   color: #3a3a3a;
 `;
 
+// Formatando o container ccom os cards do saldo
 export const CardContainer = styled.section`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -23,6 +24,7 @@ export const CardContainer = styled.section`
   margin-top: -150px;
 `;
 
+// Formatando os cards com dados do saldo
 export const Card = styled.div`
   background: ${({ total }: CardProps): string => (total ? '#FF872C' : '#fff')};
   padding: 22px 32px;
@@ -47,6 +49,7 @@ export const Card = styled.div`
   }
 `;
 
+// Formatando a tabela com a lista de transações
 export const TableContainer = styled.section`
   margin-top: 64px;
 
@@ -75,10 +78,12 @@ export const TableContainer = styled.section`
         color: #363f5f;
       }
 
+      // Definindo a cor para transações do tipo 'income'
       &.income {
         color: #12a454;
       }
 
+      // Definindo a cor para transações do tipo 'outcome'
       &.outcome {
         color: #e83f5b;
       }

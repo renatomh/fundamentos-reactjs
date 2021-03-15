@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+// Tipagem para o tamanho
 interface ContainerProps {
   size?: 'small' | 'large';
 }
@@ -11,6 +12,7 @@ export const Container = styled.div<ContainerProps>`
   header {
     width: 1120px;
     margin: 0 auto;
+    // Definindo o padding de acordo com o tamanho passado
     padding: ${({ size }) => (size === 'small' ? '0 20px ' : '0 20px 150px')};
     display: flex;
     align-items: center;

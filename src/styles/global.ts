@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
+// Definindo estilos globais para a aplicação
 export default createGlobalStyle`
   * {
     margin: 0;
@@ -13,6 +14,7 @@ export default createGlobalStyle`
     -webkit-font-smoothing: antialiased
   }
 
+  // Definindo a fonte paradão da aplicação
   body, input, button {
     font: 16px "Poppins", sans-serif;
   }
